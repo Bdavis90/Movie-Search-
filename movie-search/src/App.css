@@ -42,3 +42,22 @@ li {
   margin-left: 10px;
   font-size: 20px;
 }
+
+.movie-list {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+
+.movie {
+  margin: 20px 20px 20px 0;
+}
+
+.movie,
+.movie-card,
+img {
+  width: 420px;
+  height: 420px;
+}

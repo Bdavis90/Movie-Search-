@@ -61,3 +61,22 @@ img {
   width: 420px;
   height: 420px;
 }
+
+.page-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-left: 324px;
+}
+
+.page-list,
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.page-list,
+.page-number-active {
+  color: blue;
+  text-decoration: underline;
+}

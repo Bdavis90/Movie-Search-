@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Movies = ({ movies, image }) => {
+const Movies = ({ movies, image, title }) => {
   console.log(movies);
   console.log(image);
   return (
@@ -15,6 +15,7 @@ const Movies = ({ movies, image }) => {
             ) : (
               <img src={`https://image.tmdb.org/t/p/w500${image}`}></img>
             )}
+            <h2 className="movie-title">{title}</h2>
           </div>
         </div>
       }

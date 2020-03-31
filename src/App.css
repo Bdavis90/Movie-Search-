@@ -51,15 +51,24 @@ li {
   margin: 50px auto;
 }
 
-.movie {
-  margin: 20px 20px 20px 0;
-}
-
 .movie,
 .movie-card,
 img {
-  width: 420px;
-  height: 420px;
+  width: 220px;
+  height: 220px;
+  margin: 17px 0 17px 37px;
+}
+.movie {
+  margin: 20px 20px 20px 0;
+  width: 330px;
+  height: 370px;
+  background: #272323;
+}
+
+.movie-title {
+  color: white;
+  font-size: 22px;
+  text-align: center;
 }
 
 .page-list {

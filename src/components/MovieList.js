@@ -6,7 +6,14 @@ const MovieList = ({ movies }) => {
     <div className="movie-container">
       <div className="movie-list">
         {movies.map((movie, i) => {
-          return <Movies movies={movie} image={movie.poster_path} key={i} />;
+          return (
+            <Movies
+              movies={movie}
+              image={movie.poster_path}
+              title={movie.original_title}
+              key={i}
+            />
+          );
         })}
       </div>
     </div>

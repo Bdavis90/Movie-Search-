@@ -7,6 +7,7 @@ import Pagination from "./Pagination";
 const SearchMovies = () => {
   const [results, setResults] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
+  const [title, setTitle] = useState("");
   const [totalResults, setTotalResults] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -23,6 +24,7 @@ const SearchMovies = () => {
         console.log(data);
         setResults([...data.data.results]);
         setTotalResults(data.data.total_results);
+        setTitle(data.data.original_title);
       });
   };
 
@@ -48,10 +50,14 @@ const SearchMovies = () => {
     <>
       <form onSubmit={handleSubmit} className="search-bar">
         <label>Search for a movie</label>
-        <input onChange={handleChange} value={searchTitle} />
+        <input
+          onChange={handleChange}
+          value={searchTitle}
+          placeholder="Search for a movie..."
+        />
         <button>Search</button>
       </form>
-      <MovieList movies={results} />
+      <MovieList movies={results} title={title} />
       {totalResults > 20 ? (
         <Pagination
           pages={numberOfPages}

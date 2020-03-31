@@ -17,7 +17,7 @@ const SearchMovies = () => {
     e.preventDefault();
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}`
+        `http://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}`
       )
       .then(data => {
         setResults([...data.data.results]);
@@ -33,7 +33,7 @@ const SearchMovies = () => {
   const nextPage = pageNumber => {
     axios
       .get(
-        `https://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}&page=${pageNumber}`
+        `http://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}&page=${pageNumber}`
       )
       .then(data => {
         setResults([...data.data.results]);

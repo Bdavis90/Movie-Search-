@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import Movies from "./Movies";
 import MovieList from "./MovieList";
 import Pagination from "./Pagination";
 
@@ -21,7 +20,6 @@ const SearchMovies = () => {
         `https://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}`
       )
       .then(data => {
-        console.log(data);
         setResults([...data.data.results]);
         setTotalResults(data.data.total_results);
         setTitle(data.data.original_title);
@@ -38,7 +36,6 @@ const SearchMovies = () => {
         `https://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}&page=${pageNumber}`
       )
       .then(data => {
-        console.log(data);
         setResults([...data.data.results]);
         setCurrentPage(pageNumber);
       });

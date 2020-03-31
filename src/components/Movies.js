@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Movies = ({ movies, image, title }) => {
-  console.log(movies);
-  console.log(image);
+const Movies = ({ image, title }) => {
   return (
     <>
       {

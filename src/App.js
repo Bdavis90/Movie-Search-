@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Title />
-      <SearchMovies onSubmit />
+      <SearchMovies />
     </>
   );
 }

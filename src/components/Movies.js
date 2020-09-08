@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Movies = ({ image, title }) => {
+const Movies = ({ image, title, id }) => {
   return (
     <>
       {
@@ -14,6 +15,9 @@ const Movies = ({ image, title }) => {
               <img src={`https://image.tmdb.org/t/p/w500${image}`}></img>
             )}
             <h2 className="movie-title">{title}</h2>
+            <Link className="more-details" to={`/movie/${id}`}>
+              More Details
+            </Link>
           </div>
         </div>
       }

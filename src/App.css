@@ -6,7 +6,7 @@ body {
 }
 
 .search-bar {
-  margin-top: 100px;
+  margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,28 +19,28 @@ body {
 }
 
 input {
-  margin-left: 8px;
+  margin-left: 0.8rem;
   width: 60%;
 }
 
 .search-bar,
 label {
   color: white;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 nav {
   border-bottom: 1px solid #666;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 
 nav,
 li {
-  height: 30px;
+  height: 3rem;
   color: white;
   list-style: none;
-  margin-left: 10px;
-  font-size: 20px;
+  margin-left: 1rem;
+  font-size: 2rem;
 }
 
 .movie-list {
@@ -48,26 +48,26 @@ li {
   flex-direction: row;
   width: 70%;
   flex-wrap: wrap;
-  margin: 50px auto;
+  margin: 5rem auto;
 }
 
 .movie,
 .movie-card,
 img {
-  width: 220px;
-  height: 220px;
+  width: 22rem;
+  height: 22rem;
   margin: 17px 0 17px 37px;
 }
 .movie {
   margin: 20px 20px 20px 0;
-  width: 330px;
-  height: 370px;
+  width: 33rem;
+  height: 37rem;
   background: #272323;
 }
 
 .movie-title {
   color: white;
-  font-size: 22px;
+  font-size: 2.2rem;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
-  margin-left: 324px;
+  margin-left: 32.4rem;
 }
 
 .page-list,

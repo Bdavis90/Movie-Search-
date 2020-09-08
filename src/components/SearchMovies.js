@@ -10,32 +10,32 @@ const SearchMovies = () => {
   const [totalResults, setTotalResults] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const apiKey = "7a4b56a1c86be6435637369c10a849bc";
   console.log(results);
   console.log(searchTitle);
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .get(
-        `http://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}`
+        `http://api.themoviedb.org/3/search/movie/?api_key=7a4b56a1c86be6435637369c10a849bc&query=${searchTitle}`
       )
-      .then(data => {
+      .then((data) => {
         setResults([...data.data.results]);
         setTotalResults(data.data.total_results);
         setTitle(data.data.original_title);
       });
+    setCurrentPage(1);
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setSearchTitle(e.target.value);
   };
 
-  const nextPage = pageNumber => {
+  const nextPage = (pageNumber) => {
     axios
       .get(
-        `http://api.themoviedb.org/3/search/movie/?api_key=${apiKey}&query=${searchTitle}&page=${pageNumber}`
+        `http://api.themoviedb.org/3/search/movie/?api_key=7a4b56a1c86be6435637369c10a849bc&query=${searchTitle}&page=${pageNumber}`
       )
-      .then(data => {
+      .then((data) => {
         setResults([...data.data.results]);
         setCurrentPage(pageNumber);
       });

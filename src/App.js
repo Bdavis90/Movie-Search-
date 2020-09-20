@@ -6,14 +6,12 @@ import Home from "./components/Home";
 
 function App() {
   return (
-    <Router>
-      <>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route exact path="movie/:id" component={Movie} />
-        </Switch>
-      </>
-    </Router>
+    <>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/movie/:id" component={Movie} />
+      </Switch>
+    </>
   );
 }
 

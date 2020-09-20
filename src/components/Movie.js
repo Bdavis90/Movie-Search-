@@ -12,7 +12,11 @@ const Movie = (props) => {
       .then((data) => console.log(data));
   };
   getMovie();
-  return <div style={{ backgroundColor: "white" }}>Movie Component</div>;
+  return (
+    <div style={{ backgroundColor: "white", width: "100%", height: "100%" }}>
+      Movie Component
+    </div>
+  );
 };
 
 export default Movie;

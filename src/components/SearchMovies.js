@@ -16,7 +16,7 @@ const SearchMovies = () => {
     e.preventDefault();
     axios
       .get(
-        `http://api.themoviedb.org/3/search/movie/?api_key=${process.env.REACT_APP_API_KEY}&query=${searchTitle}`
+        `https://api.themoviedb.org/3/search/movie/?api_key=${process.env.REACT_APP_API_KEY}&query=${searchTitle}`
       )
       .then((data) => {
         setResults([...data.data.results]);
@@ -33,7 +33,7 @@ const SearchMovies = () => {
   const nextPage = (pageNumber) => {
     axios
       .get(
-        `http://api.themoviedb.org/3/search/movie/?api_key=${process.env.REACT_APP_API_KEY}&query=${searchTitle}&page=${pageNumber}`
+        `https://api.themoviedb.org/3/search/movie/?api_key=${process.env.REACT_APP_API_KEY}&query=${searchTitle}&page=${pageNumber}`
       )
       .then((data) => {
         setResults([...data.data.results]);

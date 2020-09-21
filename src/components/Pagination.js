@@ -9,8 +9,8 @@ const Pagination = ({ pages, nextPage, currentPage }) => {
   return (
     <>
       <ul className="page-list">
-        {pageLinks.map(page => {
-          const active = currentPage == page ? "active" : "";
+        {pageLinks.map((page) => {
+          const active = currentPage === page ? "active" : "";
           return (
             <li
               className={`page-list-pages`}

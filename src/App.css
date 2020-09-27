@@ -53,7 +53,7 @@ li {
 
 .movie,
 .movie-card,
-img {
+.movie-card-img {
   width: 22rem;
   height: 22rem;
   margin: 17px 0 17px 37px;
@@ -69,6 +69,28 @@ img {
   color: white;
   font-size: 2.2rem;
   text-align: center;
+}
+
+.current-movie-container {
+  background: rgb(34, 33, 33);
+  position: relative;
+  height: 100%;
+  width: 300rem;
+  margin: 1rem auto;
+}
+
+.current-movie-container,
+.current-movie-img {
+  text-align: center;
+  padding: 10px;
+}
+
+.current-movie-release_date {
+  display: inline;
+}
+
+.current-movie-runtime {
+  display: inline;
 }
 
 .page-list {

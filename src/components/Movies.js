@@ -9,10 +9,14 @@ const Movies = ({ image, title, id }) => {
           <div className="movie-card">
             {image === null ? (
               <img
+                className="movie-card-img"
                 src={`https://blog.stylingandroid.com/wp-content/themes/lontano-pro/images/no-image-slide.png`}
               />
             ) : (
-              <img src={`https://image.tmdb.org/t/p/w500${image}`}></img>
+              <img
+                className="movie-card-img"
+                src={`https://image.tmdb.org/t/p/w500${image}`}
+              ></img>
             )}
             <h2 className="movie-title">{title}</h2>
             <Link className="more-details" to={`/movie/${id}`}>

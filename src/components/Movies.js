@@ -18,8 +18,10 @@ const Movies = ({ image, title, id }) => {
                 src={`https://image.tmdb.org/t/p/w500${image}`}
               ></img>
             )}
-            <h2 className="movie-title">{title}</h2>
-            <Link className="more-details" to={`/movie/${id}`}>
+            <h2 className="movie-title">
+              {title.length < 20 ? title : `${title.substring(0, 18)}...`}
+            </h2>
+            <Link className="movie-details" to={`/movie/${id}`}>
               More Details
             </Link>
           </div>

@@ -18,15 +18,21 @@ body {
   margin: 0 auto;
 }
 
+.search-bar,
+label {
+  margin-top: 2rem;
+  color: white;
+  font-size: 4rem;
+}
+
+form,
+button {
+  margin: 10px 0;
+}
+
 input {
   margin-left: 0.8rem;
   width: 60%;
-}
-
-.search-bar,
-label {
-  color: white;
-  font-size: 4rem;
 }
 
 nav {
@@ -34,9 +40,7 @@ nav {
   margin-bottom: 3rem;
 }
 
-nav,
 li {
-  height: 3rem;
   color: white;
   list-style: none;
   margin-left: 1rem;
@@ -58,10 +62,11 @@ li {
   height: 22rem;
   margin: 17px 0 17px 37px;
 }
+
 .movie {
   margin: 20px 20px 20px 0;
   width: 33rem;
-  height: 37rem;
+  height: 40rem;
   background: #272323;
 }
 
@@ -71,26 +76,55 @@ li {
   text-align: center;
 }
 
+.movie-details {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: white;
+}
+
 .current-movie-container {
   background: rgb(34, 33, 33);
   position: relative;
   height: 100%;
-  width: 300rem;
+  width: 40%;
   margin: 1rem auto;
+  text-align: center;
 }
 
 .current-movie-container,
+a {
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
 .current-movie-img {
   text-align: center;
   padding: 10px;
 }
 
-.current-movie-release_date {
-  display: inline;
+.current-movie-title {
+  font-size: 3rem;
+  color: black;
 }
 
-.current-movie-runtime {
-  display: inline;
+.current-movie-stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.current-movie-stats-center {
+  margin: 0 auto;
+}
+
+.current-movie-buttons,
+a {
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .page-list {
@@ -101,7 +135,7 @@ li {
 }
 
 .page-list,
-a {
+.page-number- {
   color: white;
   text-decoration: none;
 }

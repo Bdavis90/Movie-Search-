@@ -35,13 +35,24 @@ const Movie = (props) => {
         ></img>
       )}
       <h2 className="current-movie-title">{movie.title}</h2>
-      <ul>
-        <li className="current-moive-release-date">{movie.release_date}</li>
-        <li className="current-movie-runtime">{movie.runtime}</li>
-        <li className="current-movie-plot">{movie.overview}</li>
-      </ul>
-      <a href={`https://www.imdb.com/title/${movie.imdb_id}`}>View IMDb</a>
-      <Link to={`/`}>Back To Search</Link>
+
+      <div className="current-movie-stats">
+        <div className="current-movie-stats-center">
+          <h3 className="current-moive-release-date">
+            Release Date: {movie.release_date} Runtime: {movie.runtime} mins
+          </h3>
+        </div>
+      </div>
+      <h3 className="current-movie-plot">Plot: {movie.overview}</h3>
+      <div className="current-movie-buttions">
+        <a
+          href={`https://www.imdb.com/title/${movie.imdb_id}`}
+          classname="current-movie-imdb"
+        >
+          View IMDb
+        </a>
+        <Link to={`/`}>Back To Search</Link>
+      </div>
     </div>
   );
 };

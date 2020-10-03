@@ -6,7 +6,6 @@ const MovieList = ({ movies }) => {
     <div className="movie-container">
       <div className="movie-list">
         {movies.map((movie, i) => {
-          console.log(movie);
           return (
             <Movies
               image={movie.poster_path}

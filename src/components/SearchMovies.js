@@ -10,8 +10,6 @@ const SearchMovies = () => {
   const [totalResults, setTotalResults] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(results);
-  console.log(searchTitle);
   const handleSubmit = (e) => {
     e.preventDefault();
     axios

@@ -80,6 +80,7 @@ li {
   border: 1px solid black;
   border-radius: 8px;
   padding: 0.8rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -92,14 +93,10 @@ li {
   text-align: center;
 }
 
-.current-movie-container,
-a {
+.current-movie-container {
   color: white;
   padding: 1rem;
   font-size: 2rem;
-  text-decoration: none;
-  border: 1px solid black;
-  border-radius: 7px;
 }
 
 .current-movie-img {
@@ -121,12 +118,6 @@ a {
   margin: 0 auto;
 }
 
-.current-movie-buttons,
-a {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-
 .page-list {
   display: flex;
   flex-wrap: wrap;
@@ -135,13 +126,32 @@ a {
 }
 
 .page-list,
-.page-number- {
-  color: white;
-  text-decoration: none;
-}
-
-.page-list,
+.page-list-pages,
 .page-number-active {
   color: blue;
   text-decoration: underline;
+  border: none;
+  padding: 0;
+}
+
+.page-list,
+.page-list-pages,
+.page-number- {
+  color: white;
+  text-decoration: none;
+  border: none;
+  margin-right: 1px;
+  padding: 0;
+}
+
+.current-movie-buttons,
+.current-movie-imdb,
+a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 7px;
+  color: white;
+  padding: 0.5rem;
 }

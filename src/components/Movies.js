@@ -10,11 +10,13 @@ const Movies = ({ image, title, id }) => {
             {image === null ? (
               <img
                 className="movie-card-img"
+                alt="Poster not availible"
                 src={`https://blog.stylingandroid.com/wp-content/themes/lontano-pro/images/no-image-slide.png`}
               />
             ) : (
               <img
                 className="movie-card-img"
+                alt={`Poster of ${title} movie`}
                 src={`https://image.tmdb.org/t/p/w500${image}`}
               ></img>
             )}

@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 
 const Movie = (props) => {
   const { id } = props.match.params;
-  console.log(props);
   const [movie, setMovie] = useState([]);
 
   const getMovie = () => {
     Axios.get(
       `https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
     ).then((data) => {
-      console.log(data);
       setMovie(data.data);
     });
   };
@@ -20,7 +18,6 @@ const Movie = (props) => {
     getMovie();
   }, []);
 
-  console.log(movie);
   return (
     <div className="current-movie-container">
       {movie.poster_path === null ? (
@@ -47,11 +44,13 @@ const Movie = (props) => {
       <div className="current-movie-buttions">
         <a
           href={`https://www.imdb.com/title/${movie.imdb_id}`}
-          classname="current-movie-imdb"
+          className="current-movie-imdb"
         >
           View IMDb
         </a>
-        <Link to={`/`}>Back To Search</Link>
+        <Link className="current-movie-imdb" to={`/`}>
+          Back To Search
+        </Link>
       </div>
     </div>
   );
